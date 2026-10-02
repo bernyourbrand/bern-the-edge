@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bern The Edge | Golf Marketing Consulting</title>
+<meta name="description" content="Bern The Edge is the marketing caddie for golf brands: strategy, revenue operations, demand generation, and partnerships for golf tech, courses, venues, gear, and service brands.">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="Bern The Edge | Golf Marketing Consulting">
+<meta property="og:description" content="Fueling the golf brands moving the game forward.">
+<meta property="og:type" content="website">
+<script>document.documentElement.classList.add("js")</script>
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900&family=Playfair+Display:ital,wght@0,600;0,800;0,900;1,400;1,600;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#F80000;
+  --red-deep:#B80000;
+  --black:#000000;
+  --graphite:#141414;
+  --rule:#2A2A2A;
+  --chalk:#F4F4F0;
+  --stone:#A3A39C;
+  --serif:"Playfair Display", Georgia, "Times New Roman", serif;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --wrap:1200px;
+  --gutter:clamp(20px,5vw,56px);
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 84px);background:var(--black)}
+body{margin:0;background:var(--black);color:var(--chalk);font-family:var(--sans);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gutter)}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--chalk);color:var(--black);padding:8px 14px;z-index:100}
+.skip:focus{left:8px}
+
+/* ---------- Nav ---------- */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(0,0,0,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s}
+.nav.scrolled{border-bottom-color:var(--rule)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{height:44px;width:auto}
+.brand span{font-family:var(--serif);font-weight:800;font-size:1.3rem;letter-spacing:-.01em}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none;margin:0;padding:0}
+.nav-links a{text-decoration:none;font-size:.95rem;color:var(--stone);transition:color .2s}
+.nav-links a:hover{color:var(--chalk)}
+.nav-links a.btn,.nav-links a.btn:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--sans);font-weight:700;font-size:1rem;text-decoration:none;padding:14px 24px;border-radius:999px;border:2px solid var(--red);background:var(--red);color:#fff;cursor:pointer;transition:background .2s,color .2s,transform .2s}
+.btn:hover{background:var(--red-deep);border-color:var(--red-deep)}
+.btn:active{transform:translateY(1px)}
+.btn.ghost{background:transparent;color:var(--chalk);border-color:#4a4a4a}
+.btn.ghost:hover{border-color:var(--chalk)}
+.nav .btn{padding:10px 18px;font-size:.92rem}
+.menu-btn{display:none;background:none;border:1px solid #4a4a4a;color:var(--chalk);border-radius:999px;padding:8px 16px;font:600 .9rem var(--sans);cursor:pointer}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:hidden;min-height:calc(100svh - 72px);display:flex;align-items:center;padding:56px 0 96px;isolation:isolate}
+.hero-green{position:absolute;inset:0;z-index:-1;width:100%;height:100%}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:clamp(24px,5vw,72px);width:100%}
+.hero h1{font-family:var(--serif);font-weight:900;font-size:clamp(2.7rem,6.2vw,5.6rem);line-height:.98;letter-spacing:-.025em;margin:0 0 44px}
+.hero h1 em{font-style:italic;font-weight:900;font-size:1.14em;line-height:.9;color:var(--red)}
+.hero p.lede{font-size:clamp(1.1rem,1.6vw,1.3rem);color:#d7d7d1;max-width:34em;margin:0 0 36px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:14px}
+.mark-wrap{justify-self:center;width:min(100%,520px);display:flex;flex-direction:column;align-items:center;gap:14px}
+.mark{position:relative;width:100%;aspect-ratio:3315/2793;filter:drop-shadow(0 30px 60px rgba(248,0,0,.18))}
+.mark-full{position:absolute;inset:0;width:100%;height:100%}
+.mark-anim{position:absolute;left:-0.784%;top:-1.074%;width:54.208%;height:68.85%;overflow:visible}
+.js .mark-full{opacity:0}
+.js .mark-anim{visibility:hidden}
+.replay{background:none;border:none;color:var(--stone);font:600 .88rem var(--sans);text-decoration:underline;text-underline-offset:3px;cursor:pointer;opacity:0;transition:opacity .4s,color .2s;padding:6px 10px}
+.replay.show{opacity:1}
+.replay:hover{color:var(--chalk)}
+
+/* ---------- Sections ---------- */
+section{position:relative}
+.sec{padding:clamp(80px,12vw,150px) 0}
+.sec-head{max-width:44rem;margin-bottom:clamp(40px,6vw,72px)}
+.sec-head h2{font-family:var(--serif);font-weight:900;font-size:clamp(2.2rem,4.6vw,3.8rem);line-height:1.02;letter-spacing:-.02em;margin:0 0 14px}
+.sec-head p{font-family:var(--serif);font-style:italic;font-size:clamp(1.15rem,1.8vw,1.45rem);color:var(--stone);margin:0;line-height:1.4}
+
+/* Statement */
+.statement{border-top:1px solid var(--rule)}
+.statement .big{font-family:var(--sans);font-stretch:125%;font-weight:800;font-size:clamp(1.75rem,4.2vw,3.5rem);line-height:1.08;letter-spacing:-.02em;margin:0;max-width:22em}
+.statement .big span{color:var(--stone)}
+.statement .context{font-size:clamp(1.25rem,1.8vw,1.5rem);line-height:1.45;color:var(--stone);max-width:38em;margin:0 0 28px}
+.caddie{margin-top:clamp(64px,9vw,110px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,80px);align-items:start;padding-top:clamp(40px,6vw,64px);border-top:1px solid var(--rule)}
+.caddie h3{font-family:var(--serif);font-weight:900;font-size:clamp(2.2rem,4.4vw,3.8rem);line-height:1.02;margin:0 0 16px;letter-spacing:-.015em}
+.caddie .sub{font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,2.1vw,1.8rem);line-height:1.3;color:var(--chalk);margin:0 0 20px}
+.caddie .roll{color:var(--stone);margin:0;font-size:clamp(1.1rem,1.6vw,1.4rem);line-height:1.5}
+.caddie .roll b{color:var(--red);font-weight:900}
+.in-line{font-family:var(--sans);font-weight:400;font-size:clamp(1.15rem,1.9vw,1.5rem);line-height:1.3}
+.in-line p{margin:0}
+.in-line b{color:var(--red);font-weight:900}
+.pillars{list-style:none;margin:22px 0;padding:0;border-top:1px solid var(--rule)}
+.pillars li{font-stretch:125%;font-weight:800;font-size:clamp(1.45rem,2.9vw,2.35rem);line-height:1.1;letter-spacing:-.015em;padding:14px 0;border-bottom:1px solid var(--rule);color:var(--chalk)}
+
+/* Verticals */
+.verticals{background:var(--graphite)}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--rule);margin-bottom:clamp(36px,5vw,56px)}
+.tab{background:none;border:none;color:var(--stone);text-align:left;cursor:pointer;padding:0 0 22px;position:relative;font:inherit}
+.tab .t-name{display:block;font-family:var(--serif);font-weight:800;font-size:clamp(1.5rem,3vw,2.4rem);line-height:1.1;transition:color .25s}
+.tab .t-kind{display:block;font-size:.95rem;margin-top:4px}
+.tab::after{content:"";position:absolute;left:0;bottom:-1px;height:3px;width:100%;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.tab[aria-selected="true"]{color:var(--chalk)}
+.tab[aria-selected="true"] .t-name{color:var(--red)}
+.tab[aria-selected="true"]::after{transform:scaleX(1)}
+.tab:hover .t-name{color:var(--chalk)}
+.tab[aria-selected="true"]:hover .t-name{color:var(--red)}
+.panel[hidden]{display:none}
+.panel .p-tag{font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,2.4vw,1.85rem);margin:0 0 clamp(28px,4vw,44px);max-width:30em;line-height:1.3}
+.panel.enter{animation:panelIn .45s cubic-bezier(.2,.7,.2,1)}
+@keyframes panelIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.segs{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px)}
+.seg h3{font-family:var(--sans);font-weight:800;font-size:1.45rem;line-height:1.2;margin:0 0 4px}
+.seg .kind{color:var(--red);font-weight:600;margin:0 0 16px}
+.seg p{color:#cfcfc9;margin:0 0 12px;max-width:34em}
+.chips{list-style:none;padding:0;margin:20px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+.chips li{border:1px solid #3a3a3a;border-radius:999px;padding:6px 14px;font-size:.88rem;color:#d9d9d3}
+
+/* Bag */
+.bag-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.club{display:grid;grid-template-columns:150px minmax(0,1fr) minmax(0,1.15fr);gap:clamp(20px,3vw,48px);padding:clamp(32px,4vw,48px) 0;border-bottom:1px solid var(--rule);position:relative}
+.club::before{content:"";position:absolute;left:0;top:-1px;height:2px;width:100%;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.club:hover::before{transform:scaleX(1)}
+.club .stage{font-size:.95rem;color:var(--stone);padding-top:10px}
+.club .stage svg{display:block;margin-bottom:10px}
+.club h3{font-family:var(--serif);font-weight:900;font-size:clamp(2rem,3.8vw,3.1rem);line-height:1;margin:0 0 10px;letter-spacing:-.015em}
+.club .tagline{font-family:var(--serif);font-style:italic;color:var(--stone);margin:0;font-size:1.1rem;line-height:1.4}
+.club .svc{font-weight:800;font-size:1.25rem;margin:0 0 10px}
+.club .desc{margin:0 0 16px;color:#d7d7d1}
+.club .shot{margin:0;color:var(--red);font-family:var(--serif);font-style:italic;font-size:1.08rem;line-height:1.45}
+
+/* Values card */
+.values{background:var(--black);padding-top:0}
+.card{background:var(--chalk);color:#111;border-radius:6px;padding:clamp(32px,6vw,72px);position:relative;overflow:hidden}
+.card::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;border:2px dashed rgba(248,0,0,.35)}
+.card .sec-head h2{color:#000}
+.card .sec-head p{color:#555}
+.rules{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,52px) clamp(28px,5vw,72px);margin:0;padding:0;list-style:none}
+.rules h3{font-family:var(--sans);font-weight:900;color:var(--red);font-size:1.5rem;margin:0 0 6px;line-height:1.2}
+.rules .lead{font-weight:700;margin:0 0 6px;color:#111}
+.rules p{margin:0;color:#3d3d3d}
+
+/* Impact */
+.impact{background:var(--red);color:#fff;overflow:hidden}
+.impact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,90px);align-items:end}
+.impact h2{font-family:var(--serif);font-weight:900;font-size:clamp(2.6rem,5.6vw,4.8rem);line-height:.98;letter-spacing:-.025em;margin:0}
+.impact .label{font-family:var(--serif);font-style:italic;font-weight:800;font-size:clamp(1.5rem,2.2vw,1.9rem);margin:0 0 18px;color:#000}
+.impact p.body{font-size:clamp(1.3rem,1.9vw,1.55rem);font-weight:400;line-height:1.5;margin:0;color:#fff}
+
+/* Contact */
+.contact .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(36px,6vw,90px);align-items:start}
+.contact h2{font-family:var(--serif);font-weight:900;font-size:clamp(2.4rem,5vw,4.2rem);line-height:1;margin:0 0 18px;letter-spacing:-.02em}
+.contact .intro{color:var(--stone);font-size:1.15rem;max-width:26em;margin:0 0 28px}
+.contact .side-icon{width:110px;margin-bottom:28px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field.full{grid-column:1/-1}
+.field[hidden]{display:none}
+label{font-size:.92rem;font-weight:600;color:#d7d7d1}
+input,select,textarea{font:inherit;color:var(--chalk);background:var(--graphite);border:1px solid #333;border-radius:8px;padding:13px 14px;transition:border-color .2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(248,0,0,.25)}
+textarea{min-height:140px;resize:vertical}
+select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--stone) 50%),linear-gradient(135deg,var(--stone) 50%,transparent 50%);background-position:calc(100% - 20px) 55%,calc(100% - 14px) 55%;background-size:6px 6px;background-repeat:no-repeat;padding-right:40px}
+.form-foot{grid-column:1/-1;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.status{font-size:.95rem;color:var(--stone);margin:0}
+.status.ok{color:var(--chalk)}
+.status.err{color:#ff6b6b}
+
+/* Footer */
+footer{border-top:1px solid var(--rule);padding:48px 0 56px;color:var(--stone);font-size:.95rem}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+footer .parent{display:flex;align-items:center;gap:14px}
+footer .parent img{height:40px;width:auto}
+footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offset:3px}
+
+/* ---------- Responsive ---------- */
+@media (max-width:980px){
+  .nav-links{display:none}
+  .menu-btn{display:inline-block}
+  .nav-links.open{display:flex;position:absolute;top:72px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;background:#000;border-bottom:1px solid var(--rule);padding:8px var(--gutter) 20px}
+  .nav-links.open li{width:100%}
+  .nav-links.open a{display:block;padding:14px 0;font-size:1.1rem;color:var(--chalk);border-bottom:1px solid var(--rule)}
+  .nav-links.open .btn{margin-top:16px;border-bottom:none;display:inline-flex}
+  .hero .wrap{grid-template-columns:1fr}
+  .mark-wrap{grid-row:1;width:min(82%,380px);justify-self:start;align-items:flex-start}
+  .caddie,.impact .wrap,.contact .wrap{grid-template-columns:1fr}
+  .club{grid-template-columns:1fr;gap:14px}
+  .club .stage{padding-top:0;display:flex;align-items:center;gap:10px}
+  .club .stage svg{margin:0}
+}
+@media (max-width:720px){
+  .segs,.rules,form{grid-template-columns:1fr}
+  .tabs{grid-template-columns:repeat(3,auto);gap:22px;overflow-x:auto}
+  .tab .t-kind{font-size:.82rem}
+  .brand span{font-size:1.1rem}
+  .nav .wrap > .btn{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to Content</a>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Bern The Edge home">
+      <img src="assets/icon.webp" alt="" width="44" height="47">
+      <span>Bern The Edge</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menu</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#bag">See What's in Our Bag</a></li>
+      <li><a href="#where">Where We Play</a></li>
+      <li><a href="#values">Our Values</a></li>
+      <li><a href="#impact">Our Purpose</a></li>
+      <li class="mobile-only"><a class="btn" href="#contact">Book a Strategy Call</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero" id="top" aria-label="Introduction">
+    <svg class="hero-green" id="green" aria-hidden="true"></svg>
+    <div class="wrap">
+      <div>
+        <h1><em>Fueling</em> the Golf Brands Moving the Game Forward.</h1>
+        <div class="cta">
+          <a class="btn" href="#contact">Book a Strategy Call</a>
+          <a class="btn ghost" href="#bag">See What's in Our Bag</a>
+        </div>
+      </div>
+      <div class="mark-wrap">
+        <div class="mark" id="mark" role="img" aria-label="Bern The Edge logo">
+          <img class="mark-full" id="markFull" src="assets/logo-stacked.webp" alt="" width="1100" height="926">
+          <svg class="mark-anim" id="markAnim" viewBox="0 0 1797 1923" aria-hidden="true">
+            <defs>
+              <mask id="tracerMask" maskUnits="userSpaceOnUse" x="0" y="0" width="1797" height="1923">
+                <path id="maskPath" d="M250 560 L1080 722 C1440 800 1560 990 1555 1170 C1545 1400 1320 1590 960 1676 C720 1718 420 1726 150 1700" fill="none" stroke="#fff" stroke-width="490"/>
+              </mask>
+            </defs>
+            <g id="lHole"><image href="assets/logo-hole.webp" width="1797" height="1923"/></g>
+            <g mask="url(#tracerMask)"><image href="assets/logo-tracer.webp" width="1797" height="1923"/></g>
+            <g id="lPole"><image href="assets/logo-pole.webp" width="1797" height="1923"/></g>
+            <g id="lBall"><image href="assets/logo-ball.webp" width="1797" height="1923"/></g>
+            <path id="ballPath" d="M300 568 L1080 722 C1470 800 1625 990 1612 1170 C1600 1400 1340 1600 960 1676 C720 1718 420 1726 208 1704" fill="none" stroke="none"/>
+          </svg>
+        </div>
+        <button class="replay" id="replay" type="button">Roll It Again</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATEMENT -->
+  <section class="sec statement" aria-labelledby="stmt">
+    <div class="wrap">
+      <p class="context">In a rapidly evolving golf landscape, igniting growth requires far more than standard marketing tactics.</p>
+      <h2 class="big" id="stmt">We Provide the Strategic Architecture &amp; Revenue-Focused Execution <span>Necessary to Scale Ambitious Golf Brands.</span></h2>
+
+      <div class="caddie">
+        <div>
+          <h3>Putt With Confidence.</h3>
+          <p class="sub">Bern The Edge Is Your Marketing Caddie.</p>
+          <p class="roll">We Roll All the Putts First So You Can Hit Yours <b>IN</b> the Center of the Cup.</p>
+        </div>
+        <div class="in-line">
+          <p>Every <b>IN</b>itiative Is Anchored <b>IN</b></p>
+          <ul class="pillars">
+            <li><b>IN</b>dustry Credibility</li>
+            <li><b>IN</b>genuity</li>
+            <li><b>IN</b>-Depth Analytics</li>
+          </ul>
+          <p>Ensuring <b>IN</b>tentional Growth <b>IN</b> the Long Run.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BAG -->
+  <section class="sec bag" id="bag" aria-labelledby="bag-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="bag-h">What's in Our Bag.</h2>
+        <p>Every Club You Need, From the First Read to the Final Putt.</p>
+      </div>
+      <ol class="bag-list">
+        <li class="club">
+          <div class="stage"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="#F80000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M4 6h9a2 2 0 0 1 2 2v17a2 2 0 0 0-2-2H4z M26 6h-9a2 2 0 0 0-2 2v17a2 2 0 0 1 2-2h9z"/></svg>In Your Pocket</div>
+          <div>
+            <h3>The Yardage Book</h3>
+            <p class="tagline">The Master Blueprint Developed Before Taking a Swing.</p>
+          </div>
+          <div>
+            <p class="svc">Brand Growth &amp; GTM Strategy</p>
+            <p class="desc">We define your exact position in the crowded golf market, build your messaging, and map out the steps to scale your brand equity.</p>
+            <p class="shot">It helps us eliminate the guesswork by mapping out carry distances, hazards to avoid, and strategic angles of attack.</p>
+          </div>
+        </li>
+        <li class="club">
+          <div class="stage"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="8" r="4.5" fill="#F4F4F0"/><path stroke="#F80000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M9 14h12l-4 4v8h-4v-8z"/></svg>Off the Tee</div>
+          <div>
+            <h3>Driver &amp; Woods</h3>
+            <p class="tagline">The Powerful Tools Engineered for Long Distance.</p>
+          </div>
+          <div>
+            <p class="svc">Marketing &amp; Revenue Operations</p>
+            <p class="desc">We build and help you execute targeted, integrated campaigns designed to turn passive golf fans into active, qualified leads.</p>
+            <p class="shot">When they're launched properly from the tee, we're positioned to succeed from the center of the fairway.</p>
+          </div>
+        </li>
+        <li class="club">
+          <div class="stage"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="#F80000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M10 27V4"/><path d="M10 4l13 5-13 5z" fill="#F80000"/><ellipse cx="10" cy="27" rx="6" ry="1.6" fill="#F4F4F0"/></svg>For the Approach</div>
+          <div>
+            <h3>Irons &amp; Wedges</h3>
+            <p class="tagline">The Full Setup Dialed In for Precision Targeting.</p>
+          </div>
+          <div>
+            <p class="svc">Demand &amp; Lead Generation</p>
+            <p class="desc">We connect your marketing efforts directly to your sales data, optimizing your CRM and tech stack to remove friction and track ROI.</p>
+            <p class="shot">With the right practice, we utilize them to drop the ball right next to the pin for easy scoring opportunities.</p>
+          </div>
+        </li>
+        <li class="club">
+          <div class="stage"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><ellipse cx="17" cy="20" rx="10" ry="4" stroke="#F80000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7" cy="18" r="4" fill="#F4F4F0"/></svg>On the Green</div>
+          <div>
+            <h3>The Putter Collection</h3>
+            <p class="tagline">The Top-Tier Options Carefully Curated Over Time.</p>
+          </div>
+          <div>
+            <p class="svc">Partnerships &amp; Sponsorships</p>
+            <p class="desc">We broker mutually beneficial relationships between your brand, golf creators, tournaments, and parallel brands to tap into new, high-intent audiences.</p>
+            <p class="shot">Each relationship is unique, requiring delicate touch and a high level of trust to roll the ball smoothly into the cup.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- VERTICALS -->
+  <section class="sec verticals" id="where" aria-labelledby="where-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="where-h">Where We Tee It Up.</h2>
+        <p>Wherever Your Brand Plays the Game, We Know the Course.</p>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Industry focus areas">
+        <button class="tab" role="tab" id="tab-studio" aria-controls="panel-studio" aria-selected="true">
+          <span class="t-name">The Studio</span><span class="t-kind">Technology</span>
+        </button>
+        <button class="tab" role="tab" id="tab-grounds" aria-controls="panel-grounds" aria-selected="false" tabindex="-1">
+          <span class="t-name">The Grounds</span><span class="t-kind">Properties</span>
+        </button>
+        <button class="tab" role="tab" id="tab-shop" aria-controls="panel-shop" aria-selected="false" tabindex="-1">
+          <span class="t-name">The Shop</span><span class="t-kind">Goods &amp; Services</span>
+        </button>
+      </div>
+
+      <div class="panel" role="tabpanel" id="panel-studio" aria-labelledby="tab-studio">
+        <p class="p-tag">Engineered to Optimize Performance and Systems.</p>
+        <div class="segs">
+          <article class="seg">
+            <h3>Performance &amp; Play Tools</h3>
+            <p class="kind">B2C Applications</p>
+            <p>Golfers are obsessed with data, improvement, and connection. We help B2C tech brands translate complex engineering into simple, irresistible consumer benefits.</p>
+            <ul class="chips" aria-label="Examples"><li>Launch Monitors &amp; Simulators</li><li>Tracking &amp; Instructional Apps</li><li>Online Communities &amp; Marketplaces</li></ul>
+          </article>
+          <article class="seg">
+            <h3>Enterprise Systems</h3>
+            <p class="kind">B2B SaaS Platforms</p>
+            <p>Selling to a golf course owner/operator requires a different approach. We help B2B tech businesses develop strategies that speak directly to operational efficiency and revenue growth.</p>
+            <ul class="chips" aria-label="Examples"><li>Club Management Software</li><li>Tee-Time &amp; Tournament Scoring Apps</li><li>Automated Agronomy Programs</li></ul>
+          </article>
+        </div>
+      </div>
+
+      <div class="panel" role="tabpanel" id="panel-grounds" aria-labelledby="tab-grounds" hidden>
+        <p class="p-tag">Built for Unforgettable Experiences On and Off the Course.</p>
+        <div class="segs">
+          <article class="seg">
+            <h3>Green Grass Destinations</h3>
+            <p class="kind">Traditional Courses</p>
+            <p>Golfers have come to expect a full experience at the course, not just a tee time. We help courses and clubs better embody and express their brand to attract and retain members and customers.</p>
+            <ul class="chips" aria-label="Examples"><li>Private Clubs</li><li>Public Courses</li><li>Golf Resorts</li><li>Ownership &amp; Management Groups</li></ul>
+          </article>
+          <article class="seg">
+            <h3>Next-Gen Entertainment</h3>
+            <p class="kind">Recreational Venues</p>
+            <p>This is the fastest-growing segment in golf, appealing to long-time players and new fans of the game. We help off-course venues and event companies generate localized demand and drive foot traffic.</p>
+            <ul class="chips" aria-label="Examples"><li>Indoor Simulator Lounges</li><li>Gamified Putting &amp; Driving Range Facilities</li><li>Event Organizers &amp; Operators</li></ul>
+          </article>
+        </div>
+      </div>
+
+      <div class="panel" role="tabpanel" id="panel-shop" aria-labelledby="tab-shop" hidden>
+        <p class="p-tag">Stocked With Elite Gear and Access to Expert Consultation.</p>
+        <div class="segs">
+          <article class="seg">
+            <h3>Gear &amp; Lifestyle Brands</h3>
+            <p class="kind">Physical Products</p>
+            <p>Golfers treat their gear as expressions of personal identity, not just utility. We help merchandise brands build distinct market positioning and connect with their ideal customers.</p>
+            <ul class="chips" aria-label="Examples"><li>Apparel &amp; Footwear</li><li>Equipment &amp; Accessories</li><li>Training Aids</li><li>Custom-Designed Items</li></ul>
+          </article>
+          <article class="seg">
+            <h3>Expert Solutions</h3>
+            <p class="kind">Professional Services</p>
+            <p>Golf is an ecosystem powered by passionate individuals, influential networks, and loyal communities. We help service providers build high-value partnerships and unlock new revenue streams.</p>
+            <ul class="chips" aria-label="Examples"><li>Agencies &amp; Investment Firms</li><li>Media &amp; Creator Networks</li><li>Coaches &amp; Trainers</li><li>Membership Societies</li></ul>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="sec values" id="values" aria-labelledby="values-h">
+    <div class="wrap">
+      <div class="card">
+        <div class="sec-head">
+          <h2 id="values-h">Starter's Guidelines.</h2>
+          <p>Our Handbook of Brand Values for Every Round.</p>
+        </div>
+        <ul class="rules">
+          <li>
+            <h3>Read Greens Carefully</h3>
+            <p class="lead">Eliminate guesswork whenever possible.</p>
+            <p>Acknowledge the obvious traits while also seeking out subtle indicators.</p>
+          </li>
+          <li>
+            <h3>Play With Integrity</h3>
+            <p class="lead">True respect for the game drives real connection.</p>
+            <p>Ensure that every relationship is rooted in authentic golf culture.</p>
+          </li>
+          <li>
+            <h3>Simplify Swing Thoughts</h3>
+            <p class="lead">Overcomplication can hurt performance.</p>
+            <p>Rely on well-practiced techniques in order to execute deliberately.</p>
+          </li>
+          <li>
+            <h3>Count Every Stroke</h3>
+            <p class="lead">Marginal gains accumulate into major outcomes.</p>
+            <p>Treat every touchpoint and decision with equal importance.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section class="sec impact" id="impact" aria-labelledby="impact-h">
+    <div class="wrap">
+      <div>
+        <p class="label">Driving Impact</p>
+        <h2 id="impact-h">Spark a Love of the Game for Everyone.</h2>
+      </div>
+      <p class="body">Inspired by a personal commitment to create accessibility for the Autism and neurodivergent communities, Bern The Edge proudly dedicates specialized services and support to adaptive programs, inclusive organizations, and barrier-breaking innovators across the golf world.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="sec contact" id="contact" aria-labelledby="contact-h">
+    <div class="wrap">
+      <div>
+        <img class="side-icon" src="assets/icon.webp" alt="" width="120" height="128">
+        <h2 id="contact-h">Take a Marketing Mulligan.</h2>
+        <p class="intro">Tell us about your golf brand and the course you're currently on. We will link up to schedule a complimentary 30-minute call to discuss business strategy, memorable birdies, and teeing up your next marketing campaign.</p>
+      </div>
+      <form id="contactForm" action="https://formspree.io/f/xdekrbdg" method="POST" novalidate>
+        <div class="field">
+          <label for="f-name">Name</label>
+          <input id="f-name" name="name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="f-company">Company</label>
+          <input id="f-company" name="company" autocomplete="organization" required>
+        </div>
+        <div class="field">
+          <label for="f-area">Golf Industry Vertical</label>
+          <select id="f-area" name="area" required>
+            <option value="">Choose One</option>
+            <option>The Studio (Technology)</option>
+            <option>The Grounds (Courses &amp; Venues)</option>
+            <option>The Shop (Gear &amp; Services)</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="field full" id="otherField" hidden>
+          <label for="f-other">Please Specify Other</label>
+          <input id="f-other" name="area_other">
+        </div>
+        <div class="field full">
+          <label for="f-msg">Tell Us About Your Marketing (&amp; Your Favorite Muni!)</label>
+          <textarea id="f-msg" name="message" required></textarea>
+        </div>
+        <div class="form-foot">
+          <button class="btn" type="submit">Submit</button>
+          <p class="status" id="formStatus" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="parent">
+      <img src="assets/icon.webp" alt="" width="38" height="40">
+      <span>A Golf Spin-Off by <a href="https://bernyourbrand.com">Bern Your Brand</a> Marketing Consulting</span>
+    </div>
+    <span>&copy; <span id="yr">2026</span> Bern Your Brand, LLC. All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const NS = 'http://www.w3.org/2000/svg';
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  /* Nav */
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  const menuBtn = document.getElementById('menuBtn'), links = document.getElementById('navLinks');
+  menuBtn.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open);
+    menuBtn.textContent = open ? 'Close' : 'Menu';
+  });
+  links.addEventListener('click', e => { if (e.target.closest('a')) { links.classList.remove('open'); menuBtn.setAttribute('aria-expanded', false); menuBtn.textContent = 'Menu'; } });
+
+  /* Tabs */
+  const tabs = [...document.querySelectorAll('.tab')];
+  function select(tab, focus){
+    tabs.forEach(t => {
+      const on = t === tab;
+      t.setAttribute('aria-selected', on);
+      t.tabIndex = on ? 0 : -1;
+      const p = document.getElementById(t.getAttribute('aria-controls'));
+      p.hidden = !on;
+      if (on){ p.classList.remove('enter'); void p.offsetWidth; p.classList.add('enter'); }
+    });
+    if (focus) tab.focus();
+  }
+  tabs.forEach((t,i) => {
+    t.addEventListener('click', () => select(t));
+    t.addEventListener('keydown', e => {
+      let n = null;
+      if (e.key === 'ArrowRight') n = tabs[(i+1)%tabs.length];
+      if (e.key === 'ArrowLeft') n = tabs[(i-1+tabs.length)%tabs.length];
+      if (e.key === 'Home') n = tabs[0];
+      if (e.key === 'End') n = tabs[tabs.length-1];
+      if (n){ e.preventDefault(); select(n, true); }
+    });
+  });
+
+  /* Hero: green contours */
+  const hero = document.querySelector('.hero');
+  const green = document.getElementById('green');
+  function el(name, attrs, parent){
+    const n = document.createElementNS(NS, name);
+    for (const k in attrs) n.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+  function drawGreen(){
+    const w = hero.clientWidth, h = hero.clientHeight;
+    green.innerHTML = '';
+    green.setAttribute('viewBox', `0 0 ${w} ${h}`);
+    const cx = w*0.28, cy = h*0.12, step = Math.max(w,h)/15;
+    for (let i=1;i<=22;i++){
+      const r = i*step*0.62;
+      let d = '';
+      for (let a=0;a<=360;a+=4){
+        const t = a*Math.PI/180;
+        const wob = 1 + 0.13*Math.sin(2*t + i*0.35) + 0.06*Math.sin(3*t - i*0.2) + 0.03*Math.sin(5*t + i);
+        d += (a===0?'M':'L') + (cx + Math.cos(t)*r*1.7*wob).toFixed(1) + ' ' + (cy + Math.sin(t)*r*wob).toFixed(1);
+      }
+      el('path', {d: d+'Z', fill:'none', stroke: i%4===0 ? 'rgba(255,255,255,.10)' : 'rgba(255,255,255,.045)', 'stroke-width': i%4===0 ? 1.2 : 1}, green);
+    }
+  }
+  let gt; drawGreen();
+  window.addEventListener('resize', () => { clearTimeout(gt); gt = setTimeout(drawGreen, 150); });
+
+  /* Hero: logo builds itself (hole, pin, then the ball traces the B) */
+  const full = document.getElementById('markFull');
+  const svg = document.getElementById('markAnim');
+  const hole = document.getElementById('lHole');
+  const pole = document.getElementById('lPole');
+  const ball = document.getElementById('lBall');
+  const ballPath = document.getElementById('ballPath');
+  const maskPath = document.getElementById('maskPath');
+  const replay = document.getElementById('replay');
+  const BL = ballPath.getTotalLength(), ML = maskPath.getTotalLength();
+  const BX = 208, BY = 1704, HX = 580, HY = 1490;
+  maskPath.style.strokeDasharray = ML;
+  const clamp = v => Math.max(0, Math.min(1, v));
+  const outCubic = t => 1 - Math.pow(1-t, 3);
+  const inOut = t => t < .5 ? 4*t*t*t : 1 - Math.pow(-2*t+2, 3)/2;
+  const outBack = t => { const c1 = 1.4, c3 = c1 + 1; return 1 + c3*Math.pow(t-1,3) + c1*Math.pow(t-1,2); };
+  let raf = null;
+
+  function render(ms){
+    // Hole: 0-450
+    const h1 = outCubic(clamp(ms/450));
+    hole.setAttribute('opacity', h1);
+    hole.setAttribute('transform', `translate(${HX} ${HY}) scale(${0.55 + 0.45*h1}) translate(${-HX} ${-HY})`);
+    // Pin drops in: 350-1000
+    const p = clamp((ms-350)/650);
+    pole.setAttribute('opacity', clamp((ms-350)/140));
+    pole.setAttribute('transform', `translate(0 ${(-560*(1-outBack(p))).toFixed(1)})`);
+    // Ball traces the B: 1000-2350
+    const b = inOut(clamp((ms-1000)/1350));
+    const pt = ballPath.getPointAtLength(b*BL);
+    const pop = outCubic(clamp((ms-1000)/220));
+    ball.setAttribute('opacity', ms < 1000 ? 0 : pop);
+    ball.setAttribute('transform', `translate(${(pt.x-BX).toFixed(1)} ${(pt.y-BY).toFixed(1)}) rotate(${(b*BL/182*57.3).toFixed(1)} ${BX} ${BY}) translate(${BX} ${BY}) scale(${0.6+0.4*pop}) translate(${-BX} ${-BY})`);
+    maskPath.style.strokeDashoffset = ML*(1-b);
+    // Wordmark joins: 2350-2850
+    const w = outCubic(clamp((ms-2350)/500));
+    full.style.opacity = w;
+    full.style.transform = `translateY(${(8*(1-w)).toFixed(2)}px)`;
+    svg.style.opacity = ms >= 2850 ? 0 : 1;
+  }
+
+  function play(){
+    cancelAnimationFrame(raf);
+    replay.classList.remove('show');
+    svg.style.visibility = 'visible';
+    if (reduce){ render(3000); replay.classList.add('show'); return; }
+    const t0 = performance.now() + 250;
+    (function tick(now){
+      const ms = now - t0;
+      render(Math.max(0, ms));
+      if (ms < 2900) raf = requestAnimationFrame(tick);
+      else replay.classList.add('show');
+    })(performance.now());
+  }
+  replay.addEventListener('click', play);
+  render(0);
+  if (document.readyState === 'complete') play(); else window.addEventListener('load', play);
+
+  /* Contact form */
+  const form = document.getElementById('contactForm');
+  const status = document.getElementById('formStatus');
+  const area = document.getElementById('f-area'), otherField = document.getElementById('otherField'), other = document.getElementById('f-other');
+  area.addEventListener('change', () => {
+    const on = area.value === 'Other';
+    otherField.hidden = !on; other.required = on;
+    if (on) other.focus(); else other.value = '';
+  });
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    status.className = 'status';
+    const missing = [...form.querySelectorAll('[required]')].filter(f => f !== other && !f.value.trim());
+    const email = form.querySelector('#f-email');
+    if (missing.length){ status.textContent = 'Please fill in every field so we can reply.'; status.classList.add('err'); missing[0].focus(); return; }
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email.value)){ status.textContent = 'Enter a valid email address so we can reply.'; status.classList.add('err'); email.focus(); return; }
+    if (!otherField.hidden && !other.value.trim()){ status.textContent = 'Please specify your golf industry vertical so we can follow up.'; status.classList.add('err'); other.focus(); return; }
+    if (form.action.includes('YOUR_FORM_ID')){ status.textContent = 'This form is not connected yet. Add a Formspree form ID to turn it on.'; status.classList.add('err'); return; }
+    status.textContent = 'Sending…';
+    try {
+      const res = await fetch(form.action, {method:'POST', body:new FormData(form), headers:{Accept:'application/json'}});
+      if (!res.ok) throw new Error();
+      form.reset(); otherField.hidden = true; other.required = false;
+      status.textContent = 'Message sent. We will be in touch soon.'; status.classList.add('ok');
+    } catch(err){
+      status.textContent = 'Your message did not send. Check your connection and try again.'; status.classList.add('err');
+    }
+  });
+})();
+</script>
+</body>
+</html>

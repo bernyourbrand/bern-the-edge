@@ -9,6 +9,15 @@
 <meta property="og:title" content="Bern The Edge | Golf Marketing Consulting">
 <meta property="og:description" content="Fueling the golf brands moving the game forward.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://golf.bernyourbrand.com/">
+<meta property="og:image" content="https://golf.bernyourbrand.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Bern The Edge logo, a golf spin-off by Bern Your Brand Marketing Consulting">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bern The Edge | Golf Marketing Consulting">
+<meta name="twitter:description" content="Fueling the golf brands moving the game forward.">
+<meta name="twitter:image" content="https://golf.bernyourbrand.com/og-image.jpg">
 <script>document.documentElement.classList.add("js")</script>
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,10 +77,10 @@ a{color:inherit}
 .hero h1 em{font-style:italic;font-weight:900;font-size:1.14em;line-height:.9;color:var(--red)}
 .hero p.lede{font-size:clamp(1.1rem,1.6vw,1.3rem);color:#d7d7d1;max-width:34em;margin:0 0 36px}
 .hero .cta{display:flex;flex-wrap:wrap;gap:14px}
-.mark-wrap{justify-self:center;width:min(100%,520px);display:flex;flex-direction:column;align-items:center;gap:14px}
-.mark{position:relative;width:100%;aspect-ratio:3315/2793;filter:drop-shadow(0 30px 60px rgba(248,0,0,.18))}
+.mark-wrap{justify-self:center;width:min(100%,480px);display:flex;flex-direction:column;align-items:center;gap:14px}
+.mark{position:relative;width:100%;aspect-ratio:3315/3488;filter:drop-shadow(0 30px 60px rgba(248,0,0,.18))}
 .mark-full{position:absolute;inset:0;width:100%;height:100%}
-.mark-anim{position:absolute;left:-0.784%;top:-1.074%;width:54.208%;height:68.85%;overflow:visible}
+.mark-anim{position:absolute;left:-0.784%;top:-0.860%;width:54.208%;height:55.132%;overflow:visible}
 .js .mark-full{opacity:0}
 .js .mark-anim{visibility:hidden}
 .replay{background:none;border:none;color:var(--stone);font:600 .88rem var(--sans);text-decoration:underline;text-underline-offset:3px;cursor:pointer;opacity:0;transition:opacity .4s,color .2s;padding:6px 10px}
@@ -90,7 +99,7 @@ section{position:relative}
 .statement .big{font-family:var(--sans);font-stretch:125%;font-weight:800;font-size:clamp(1.75rem,4.2vw,3.5rem);line-height:1.08;letter-spacing:-.02em;margin:0;max-width:22em}
 .statement .big span{color:var(--stone)}
 .statement .context{font-size:clamp(1.25rem,1.8vw,1.5rem);line-height:1.45;color:var(--stone);max-width:38em;margin:0 0 28px}
-.caddie{margin-top:clamp(64px,9vw,110px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,80px);align-items:start;padding-top:clamp(40px,6vw,64px);border-top:1px solid var(--rule)}
+.caddie{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,80px);align-items:start}
 .caddie h3{font-family:var(--serif);font-weight:900;font-size:clamp(2.2rem,4.4vw,3.8rem);line-height:1.02;margin:0 0 16px;letter-spacing:-.015em}
 .caddie .sub{font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,2.1vw,1.8rem);line-height:1.3;color:var(--chalk);margin:0 0 20px}
 .caddie .roll{color:var(--stone);margin:0;font-size:clamp(1.1rem,1.6vw,1.4rem);line-height:1.5}
@@ -107,6 +116,8 @@ section{position:relative}
 .tab{background:none;border:none;color:var(--stone);text-align:left;cursor:pointer;padding:0 0 22px;position:relative;font:inherit}
 .tab .t-name{display:block;font-family:var(--serif);font-weight:800;font-size:clamp(1.5rem,3vw,2.4rem);line-height:1.1;transition:color .25s}
 .tab .t-kind{display:block;font-size:.95rem;margin-top:4px}
+.tab .ico{display:block;margin-bottom:12px;opacity:.55;transition:opacity .25s}
+.tab[aria-selected="true"] .ico,.tab:hover .ico{opacity:1}
 .tab::after{content:"";position:absolute;left:0;bottom:-1px;height:3px;width:100%;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
 .tab[aria-selected="true"]{color:var(--chalk)}
 .tab[aria-selected="true"] .t-name{color:var(--red)}
@@ -138,12 +149,14 @@ section{position:relative}
 .club .shot{margin:0;color:var(--red);font-family:var(--serif);font-style:italic;font-size:1.08rem;line-height:1.45}
 
 /* Values card */
-.values{background:var(--black);padding-top:0}
+.values{background:var(--black);padding-top:clamp(56px,8vw,110px)}
+.caddie-sec{padding-bottom:clamp(48px,6vw,80px)}
 .card{background:var(--chalk);color:#111;border-radius:6px;padding:clamp(32px,6vw,72px);position:relative;overflow:hidden}
 .card::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;border:2px dashed rgba(248,0,0,.35)}
 .card .sec-head h2{color:#000}
 .card .sec-head p{color:#555}
 .rules{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,52px) clamp(28px,5vw,72px);margin:0;padding:0;list-style:none}
+.rules .ico{display:block;margin-bottom:12px}
 .rules h3{font-family:var(--sans);font-weight:900;color:var(--red);font-size:1.5rem;margin:0 0 6px;line-height:1.2}
 .rules .lead{font-weight:700;margin:0 0 6px;color:#111}
 .rules p{margin:0;color:#3d3d3d}
@@ -179,6 +192,7 @@ footer{border-top:1px solid var(--rule);padding:48px 0 56px;color:var(--stone);f
 footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
 footer .parent{display:flex;align-items:center;gap:14px}
 footer .parent img{height:40px;width:auto}
+footer .ft-name{color:#fff;font-weight:800;margin-right:10px}
 footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offset:3px}
 
 /* ---------- Responsive ---------- */
@@ -190,7 +204,7 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
   .nav-links.open a{display:block;padding:14px 0;font-size:1.1rem;color:var(--chalk);border-bottom:1px solid var(--rule)}
   .nav-links.open .btn{margin-top:16px;border-bottom:none;display:inline-flex}
   .hero .wrap{grid-template-columns:1fr}
-  .mark-wrap{grid-row:1;width:min(82%,380px);justify-self:start;align-items:flex-start}
+  .mark-wrap{grid-row:1;width:min(76%,340px);justify-self:start;align-items:flex-start}
   .caddie,.impact .wrap,.contact .wrap{grid-template-columns:1fr}
   .club{grid-template-columns:1fr;gap:14px}
   .club .stage{padding-top:0;display:flex;align-items:center;gap:10px}
@@ -220,10 +234,10 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
     </a>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menu</button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#bag">See What's in Our Bag</a></li>
-      <li><a href="#where">Where We Play</a></li>
-      <li><a href="#values">Our Values</a></li>
-      <li><a href="#impact">Our Purpose</a></li>
+      <li><a href="#bag">Services</a></li>
+      <li><a href="#where">Verticals</a></li>
+      <li><a href="#values">Values</a></li>
+      <li><a href="#impact">Purpose</a></li>
       <li class="mobile-only"><a class="btn" href="#contact">Book a Strategy Call</a></li>
     </ul>
   </div>
@@ -243,7 +257,7 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
       </div>
       <div class="mark-wrap">
         <div class="mark" id="mark" role="img" aria-label="Bern The Edge logo">
-          <img class="mark-full" id="markFull" src="logo-stacked.webp" alt="" width="1100" height="926">
+          <img class="mark-full" id="markFull" src="logo-stacked.webp" alt="" width="1100" height="1157">
           <svg class="mark-anim" id="markAnim" viewBox="0 0 1797 1923" aria-hidden="true">
             <defs>
               <mask id="tracerMask" maskUnits="userSpaceOnUse" x="0" y="0" width="1797" height="1923">
@@ -267,23 +281,6 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
     <div class="wrap">
       <p class="context">In a rapidly evolving golf landscape, igniting growth requires far more than standard marketing tactics.</p>
       <h2 class="big" id="stmt">We Provide the Strategic Architecture &amp; Revenue-Focused Execution <span>Necessary to Scale Ambitious Golf Brands.</span></h2>
-
-      <div class="caddie">
-        <div>
-          <h3>Putt With Confidence.</h3>
-          <p class="sub">Bern The Edge Is Your Marketing Caddie.</p>
-          <p class="roll">We Roll All the Putts First So You Can Hit Yours <b>IN</b> the Center of the Cup.</p>
-        </div>
-        <div class="in-line">
-          <p>Every <b>IN</b>itiative Is Anchored <b>IN</b></p>
-          <ul class="pillars">
-            <li><b>IN</b>dustry Credibility</li>
-            <li><b>IN</b>genuity</li>
-            <li><b>IN</b>-Depth Analytics</li>
-          </ul>
-          <p>Ensuring <b>IN</b>tentional Growth <b>IN</b> the Long Run.</p>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -296,7 +293,7 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
       </div>
       <ol class="bag-list">
         <li class="club">
-          <div class="stage"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="#F80000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M4 6h9a2 2 0 0 1 2 2v17a2 2 0 0 0-2-2H4z M26 6h-9a2 2 0 0 0-2 2v17a2 2 0 0 1 2-2h9z"/></svg>In Your Pocket</div>
+          <div class="stage"><svg class="ico" width="46" height="46" viewBox="0 0 30 30" aria-hidden="true"><path stroke="#F80000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M4 6h9a2 2 0 0 1 2 2v17a2 2 0 0 0-2-2H4z M26 6h-9a2 2 0 0 0-2 2v17a2 2 0 0 1 2-2h9z"/><path d="M7 11h5M7 15h5M7 19h3M18 11h5M18 15h5M18 19h3" stroke="#F4F4F0" stroke-width="1.6" stroke-linecap="round"/></svg>In Your Pocket</div>
           <div>
             <h3>The Yardage Book</h3>
             <p class="tagline">The Master Blueprint Developed Before Taking a Swing.</p>
@@ -308,7 +305,7 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
           </div>
         </li>
         <li class="club">
-          <div class="stage"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="8" r="4.5" fill="#F4F4F0"/><path stroke="#F80000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M9 14h12l-4 4v8h-4v-8z"/></svg>Off the Tee</div>
+          <div class="stage"><svg class="ico" width="46" height="46" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="8" r="4.5" fill="#F4F4F0"/><path stroke="#F80000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M9 14h12l-4 4v8h-4v-8z"/></svg>Off the Tee</div>
           <div>
             <h3>Driver &amp; Woods</h3>
             <p class="tagline">The Powerful Tools Engineered for Long Distance.</p>
@@ -320,7 +317,7 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
           </div>
         </li>
         <li class="club">
-          <div class="stage"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="#F80000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M10 27V4"/><path d="M10 4l13 5-13 5z" fill="#F80000"/><ellipse cx="10" cy="27" rx="6" ry="1.6" fill="#F4F4F0"/></svg>For the Approach</div>
+          <div class="stage"><svg class="ico" width="46" height="46" viewBox="0 0 30 30" aria-hidden="true"><path stroke="#F80000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M10 27V4"/><path d="M10 4l13 5-13 5z" fill="#F80000"/><ellipse cx="10" cy="27" rx="6" ry="1.6" fill="#F4F4F0"/></svg>For Every Approach</div>
           <div>
             <h3>Irons &amp; Wedges</h3>
             <p class="tagline">The Full Setup Dialed In for Precision Targeting.</p>
@@ -332,7 +329,7 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
           </div>
         </li>
         <li class="club">
-          <div class="stage"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><ellipse cx="17" cy="20" rx="10" ry="4" stroke="#F80000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7" cy="18" r="4" fill="#F4F4F0"/></svg>On the Green</div>
+          <div class="stage"><svg class="ico" width="46" height="46" viewBox="0 0 30 30" aria-hidden="true"><ellipse cx="17" cy="20" rx="10" ry="4" stroke="#F80000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7" cy="18" r="4" fill="#F4F4F0"/></svg>On the Green</div>
           <div>
             <h3>The Putter Collection</h3>
             <p class="tagline">The Top-Tier Options Carefully Curated Over Time.</p>
@@ -357,13 +354,13 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
 
       <div class="tabs" role="tablist" aria-label="Industry focus areas">
         <button class="tab" role="tab" id="tab-studio" aria-controls="panel-studio" aria-selected="true">
-          <span class="t-name">The Studio</span><span class="t-kind">Technology</span>
+          <svg class="ico" width="46" height="46" viewBox="0 0 30 30" aria-hidden="true"><rect x="8" y="3" width="14" height="24" rx="3" stroke="#F80000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.5 20.5Q14 9 19 12.5" stroke="#F4F4F0" stroke-width="1.6" fill="none" stroke-dasharray="1.5 2.2" stroke-linecap="round"/><circle cx="19" cy="12.5" r="1.8" fill="#F4F4F0"/><path d="M13 24h4" stroke="#F80000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="t-name">The Studio</span><span class="t-kind">Technology</span>
         </button>
         <button class="tab" role="tab" id="tab-grounds" aria-controls="panel-grounds" aria-selected="false" tabindex="-1">
-          <span class="t-name">The Grounds</span><span class="t-kind">Properties</span>
+          <svg class="ico" width="46" height="46" viewBox="0 0 30 30" aria-hidden="true"><path d="M3 14L15 5l12 9" stroke="#F80000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.5 12v14h17V12" stroke="#F80000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="12.5" y="18" width="5" height="8" fill="#F4F4F0"/><path d="M15 5V1.8" stroke="#F80000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 1.8l4 1.4-4 1.4z" fill="#F80000"/></svg><span class="t-name">The Grounds</span><span class="t-kind">Properties</span>
         </button>
         <button class="tab" role="tab" id="tab-shop" aria-controls="panel-shop" aria-selected="false" tabindex="-1">
-          <span class="t-name">The Shop</span><span class="t-kind">Goods &amp; Services</span>
+          <svg class="ico" width="46" height="46" viewBox="0 0 30 30" aria-hidden="true"><path d="M6 10h18l-1.6 16H7.6z" stroke="#F80000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 10V8.5a4 4 0 0 1 8 0V10" stroke="#F80000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="15" cy="18" r="3.4" fill="#F4F4F0"/></svg><span class="t-name">The Shop</span><span class="t-kind">Goods &amp; Services</span>
         </button>
       </div>
 
@@ -423,6 +420,28 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
     </div>
   </section>
 
+  <!-- CADDIE -->
+  <section class="sec caddie-sec" aria-label="Putt With Confidence">
+    <div class="wrap">
+      <div class="caddie">
+        <div>
+          <h3>Putt With Confidence.</h3>
+          <p class="sub">Bern The Edge Is Your Marketing Caddie.</p>
+          <p class="roll">We Roll All the Putts First So You Can Hit Yours <b>IN</b> the Center of the Cup.</p>
+        </div>
+        <div class="in-line">
+          <p>Every <b>IN</b>itiative Is Anchored <b>IN</b></p>
+          <ul class="pillars">
+            <li><b>IN</b>dustry Credibility</li>
+            <li><b>IN</b>genuity</li>
+            <li><b>IN</b>-Depth Analytics</li>
+          </ul>
+          <p>Ensuring <b>IN</b>tentional Growth <b>IN</b> the Long Run.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- VALUES -->
   <section class="sec values" id="values" aria-labelledby="values-h">
     <div class="wrap">
@@ -433,22 +452,22 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
         </div>
         <ul class="rules">
           <li>
-            <h3>Read Greens Carefully</h3>
+            <svg class="ico" width="46" height="46" viewBox="0 0 30 30" aria-hidden="true"><path d="M3 8.5q12-6 24 0" stroke="#F80000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 24.5q12-6 24 0" stroke="#F80000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 16.5q9.5-6 19 0" stroke="#111" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M22.58 12.55L24 16.5L19.82 16.92" stroke="#111" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><h3>Read Greens Carefully</h3>
             <p class="lead">Eliminate guesswork whenever possible.</p>
             <p>Acknowledge the obvious traits while also seeking out subtle indicators.</p>
           </li>
           <li>
-            <h3>Play With Integrity</h3>
+            <svg class="ico" width="46" height="46" viewBox="0 0 30 30" aria-hidden="true"><path d="M15 3l10 4v7c0 6.5-4.3 10.8-10 13-5.7-2.2-10-6.5-10-13V7z" stroke="#F80000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.5 15l3.2 3.2L20 11.5" stroke="#111" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><h3>Play With Integrity</h3>
             <p class="lead">True respect for the game drives real connection.</p>
             <p>Ensure that every relationship is rooted in authentic golf culture.</p>
           </li>
           <li>
-            <h3>Simplify Swing Thoughts</h3>
+            <svg class="ico" width="46" height="46" viewBox="0 0 30 30" aria-hidden="true"><path d="M7 5h16a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4H13l-4 3v-3H7a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4z" stroke="#F80000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 12h8" stroke="#111" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><h3>Simplify Swing Thoughts</h3>
             <p class="lead">Overcomplication can hurt performance.</p>
             <p>Rely on well-practiced techniques in order to execute deliberately.</p>
           </li>
           <li>
-            <h3>Count Every Stroke</h3>
+            <svg class="ico" width="46" height="46" viewBox="0 0 30 30" aria-hidden="true"><rect x="4" y="4" width="22" height="22" rx="2" stroke="#F80000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 10h22M12 4v6" stroke="#F80000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 15v7M13 15v7M16 15v7M19 15v7M8.5 21.5L21 15.5" stroke="#111" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><h3>Count Every Stroke</h3>
             <p class="lead">Marginal gains accumulate into major outcomes.</p>
             <p>Treat every touchpoint and decision with equal importance.</p>
           </li>
@@ -520,7 +539,7 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
   <div class="wrap">
     <div class="parent">
       <img src="icon.webp" alt="" width="38" height="40">
-      <span>A Golf Spin-Off by <a href="https://bernyourbrand.com">Bern Your Brand</a> Marketing Consulting</span>
+      <span><strong class="ft-name">Bern The Edge</strong>A Golf Spin-Off by <a href="https://bernyourbrand.com">Bern Your Brand</a> Marketing Consulting</span>
     </div>
     <span>&copy; <span id="yr">2026</span> Bern Your Brand, LLC. All rights reserved.</span>
   </div>

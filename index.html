@@ -97,6 +97,10 @@ section{position:relative}
 .tex{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
 .sec{overflow:hidden}
 .sec > .wrap{position:relative;z-index:1}
+.hero .tex{z-index:-1}
+.tex .ember{animation:emberRise var(--d) linear var(--dl) infinite;animation-play-state:paused;opacity:0}
+.tex.on .ember{animation-play-state:running}
+@keyframes emberRise{0%{opacity:0;transform:translate(0,0)}15%{opacity:var(--o)}70%{opacity:calc(var(--o)*.6)}100%{opacity:0;transform:translate(var(--dx),calc(var(--h)*-1))}}
 .sec{padding:clamp(80px,12vw,150px) 0}
 .sec-head{max-width:44rem;margin-bottom:clamp(40px,6vw,72px)}
 .sec-head h2{font-family:var(--serif);font-weight:900;font-size:clamp(2.2rem,4.6vw,3.8rem);line-height:1.02;letter-spacing:-.02em;margin:0 0 14px}
@@ -228,6 +232,7 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}
+  .tex .ember{opacity:calc(var(--o)*.7)}
 }
 </style>
 </head>
@@ -255,6 +260,7 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
   <!-- HERO -->
   <section class="hero" id="top" aria-label="Introduction">
     <svg class="hero-green" id="green" aria-hidden="true"></svg>
+    <svg class="tex" aria-hidden="true" data-kind="embers" data-x0="0.56" data-x1="0.94" data-n="16" data-rise="0.55" data-fill="248,60,20" data-o="0.45" data-seed="2"></svg>
     <div class="wrap">
       <div>
         <h1><em>Fueling</em> the Golf Brands Moving the Game Forward.</h1>
@@ -287,6 +293,7 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
   <!-- STATEMENT -->
   <section class="sec statement" aria-labelledby="stmt">
     <svg class="tex" aria-hidden="true" data-kind="contour" data-cx="1.02" data-cy="1.05" data-rings="13" data-step="46" data-stroke="rgba(255,255,255,.055)" data-seed="3" data-fade="0.62"></svg>
+    <svg class="tex" aria-hidden="true" data-kind="flame" data-cx="0.05" data-rings="7" data-size="260" data-stroke="248,0,0" data-o="0.16" data-seed="4"></svg>
     <div class="wrap">
       <p class="context">In a rapidly evolving golf landscape, igniting growth requires far more than standard marketing tactics.</p>
       <h2 class="big" id="stmt">We Provide the Strategic Architecture &amp; Revenue-Focused Execution <span>Necessary to Scale Ambitious Golf Brands.</span></h2>
@@ -297,6 +304,7 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
   <section class="sec bag" id="bag" aria-labelledby="bag-h">
     <svg class="tex" aria-hidden="true" data-kind="ring" data-cx="0.93" data-cy="0.04" data-r="230" data-stroke="rgba(248,0,0,.32)" data-dash="3 11" data-fade="1"></svg>
     <svg class="tex" aria-hidden="true" data-kind="ring" data-cx="0.93" data-cy="0.04" data-r="150" data-stroke="rgba(255,255,255,.07)" data-dash="2 9" data-fade="1"></svg>
+    <svg class="tex" aria-hidden="true" data-kind="tracer" data-x0="0.05" data-x1="0.8"></svg>
     <div class="wrap">
       <div class="sec-head">
         <h2 id="bag-h">What's in Our Bag.</h2>
@@ -358,6 +366,7 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
   <!-- VERTICALS -->
   <section class="sec verticals" id="where" aria-labelledby="where-h">
     <svg class="tex" aria-hidden="true" data-kind="contour" data-cx="1.0" data-cy="-0.05" data-rings="13" data-step="44" data-stroke="rgba(255,255,255,.055)" data-seed="7" data-fade="0.6"></svg>
+    <svg class="tex" aria-hidden="true" data-kind="mow" data-cx="0" data-cy="1" data-band="44" data-fade="0.3"></svg>
     <div class="wrap">
       <div class="sec-head">
         <h2 id="where-h">Where We Tee It Up.</h2>
@@ -435,6 +444,7 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
   <!-- CADDIE -->
   <section class="sec caddie-sec" aria-label="Putt With Confidence">
     <svg class="tex" aria-hidden="true" data-kind="contour" data-cx="-0.04" data-cy="1.08" data-rings="12" data-step="42" data-stroke="rgba(255,255,255,.055)" data-seed="11" data-fade="0.55"></svg>
+    <svg class="tex" aria-hidden="true" data-kind="cup" data-cx="0.9"></svg>
     <div class="wrap">
       <div class="caddie">
         <div>
@@ -458,6 +468,7 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
   <!-- VALUES -->
   <section class="sec values" id="values" aria-labelledby="values-h">
     <svg class="tex" aria-hidden="true" data-kind="ring" data-cx="0.03" data-cy="0.98" data-r="120" data-stroke="rgba(255,255,255,.08)" data-dash="2 9" data-fade="1"></svg>
+    <svg class="tex" aria-hidden="true" data-kind="match" data-cx="0.9"></svg>
     <div class="wrap">
       <div class="card">
         <div class="sec-head">
@@ -493,6 +504,8 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
   <!-- IMPACT -->
   <section class="sec impact" id="impact" aria-labelledby="impact-h">
     <svg class="tex" aria-hidden="true" data-kind="contour" data-cx="1.06" data-cy="1.3" data-rings="12" data-step="48" data-stroke="rgba(0,0,0,.13)" data-seed="5" data-fade="0.6"></svg>
+    <svg class="tex" aria-hidden="true" data-kind="spark" data-cx="0.965" data-cy="0.12" data-r="120" data-stroke="0,0,0" data-o="0.11" data-seed="6"></svg>
+    <svg class="tex" aria-hidden="true" data-kind="embers" data-x0="0.03" data-x1="0.42" data-n="14" data-rise="0.5" data-fill="255,255,255" data-o="0.4" data-seed="8"></svg>
     <div class="wrap">
       <div>
         <p class="label">Driving Impact</p>
@@ -506,6 +519,7 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
   <section class="sec contact" id="contact" aria-labelledby="contact-h">
     <svg class="tex" aria-hidden="true" data-kind="contour" data-cx="-0.08" data-cy="1.3" data-rings="13" data-step="44" data-stroke="rgba(255,255,255,.055)" data-seed="9" data-fade="0.5"></svg>
     <svg class="tex" aria-hidden="true" data-kind="ring" data-cx="0.97" data-cy="0.08" data-r="140" data-stroke="rgba(248,0,0,.28)" data-dash="3 11" data-fade="1"></svg>
+    <svg class="tex" aria-hidden="true" data-kind="dimples" data-r="300"></svg>
     <div class="wrap">
       <div>
         <img class="side-icon" src="icon.webp" alt="" width="120" height="128">
@@ -633,17 +647,28 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
   let gt; drawGreen();
   window.addEventListener('resize', () => { clearTimeout(gt); gt = setTimeout(drawGreen, 150); });
 
-  /* Section textures: faint green contours and dotted putt rings */
+  /* Section textures: green contours, putt rings, shot tracers, flames, embers */
   const texes = [...document.querySelectorAll('svg.tex')];
-  function drawTex(svg){
-    const sec = svg.parentElement, w = sec.clientWidth, hh = sec.clientHeight, d = svg.dataset;
-    svg.setAttribute('viewBox', `0 0 ${w} ${hh}`);
-    svg.innerHTML = '';
-    const cx = +d.cx*w, cy = +d.cy*hh;
-    if (d.kind === 'ring'){
-      el('circle', {cx, cy, r:d.r, fill:'none', stroke:d.stroke, 'stroke-width':2, 'stroke-dasharray':d.dash, 'stroke-linecap':'round'}, svg);
-    } else {
-      const seed = +d.seed, step = +d.step;
+  const rng = seed => () => { seed = (seed + 0x6D2B79F5) | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t ^= t + Math.imul(t ^ t >>> 7, 61 | t); return ((t ^ t >>> 14) >>> 0) / 4294967296; };
+  const fadeMask = (svg, x, y, stop) => { const m = `radial-gradient(circle at ${x}% ${y}%, #000 0, #000 25%, transparent ${stop}%)`; svg.style.webkitMaskImage = m; svg.style.maskImage = m; };
+  // A flame-shaped closed curve: round base sitting on (x, y), tapering to a leaning tip
+  function flamePath(x, y, wd, ht, lean){
+    const c = .3, L = [], R = [];
+    for (let i=0;i<=40;i++){
+      const v = i/40;
+      const hw = wd*(v < c ? Math.sqrt(1 - Math.pow((c - v)/c, 2)) : .5 + .5*Math.cos(Math.PI*(v - c)/(1 - c)));
+      const mx = x + lean*ht*v*v + wd*.18*Math.sin(v*Math.PI*1.6);
+      L.push((mx - hw).toFixed(1) + ' ' + (y - ht*v).toFixed(1));
+      R.push((mx + hw).toFixed(1) + ' ' + (y - ht*v).toFixed(1));
+    }
+    return 'M' + R.join('L') + 'L' + L.reverse().join('L') + 'Z';
+  }
+  const kinds = {
+    ring(svg, d, w, hh){
+      el('circle', {cx:+d.cx*w, cy:+d.cy*hh, r:d.r, fill:'none', stroke:d.stroke, 'stroke-width':2, 'stroke-dasharray':d.dash, 'stroke-linecap':'round'}, svg);
+    },
+    contour(svg, d, w, hh){
+      const cx = +d.cx*w, cy = +d.cy*hh, seed = +d.seed, step = +d.step;
       for (let i=1;i<=+d.rings;i++){
         const r = i*step;
         let p = '';
@@ -654,13 +679,95 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
         }
         el('path', {d:p+'Z', fill:'none', stroke:d.stroke, 'stroke-width': i%4===0 ? 1.4 : 1}, svg);
       }
-      const m = `radial-gradient(circle at ${(+d.cx*100).toFixed(0)}% ${(+d.cy*100).toFixed(0)}%, #000 0, #000 25%, transparent ${(+d.fade*100).toFixed(0)}%)`;
-      svg.style.webkitMaskImage = m; svg.style.maskImage = m;
+      fadeMask(svg, (+d.cx*100).toFixed(0), (+d.cy*100).toFixed(0), (+d.fade*100).toFixed(0));
+    },
+    // Nested flame outlines rising from the bottom edge, like contour lines of a fire
+    flame(svg, d, w, hh, k){
+      const x = +d.cx*w, y = hh + 6, n = +d.rings, size = +d.size*k, r = rng(+d.seed);
+      for (let i=n;i>=1;i--){
+        const f = i/n, o = +d.o*(i%3===0 ? 1.6 : 1);
+        el('path', {d:flamePath(x + (r()-.5)*8, y, size*.3*f, size*f, .1 + r()*.1), fill:'none', stroke:`rgba(${d.stroke},${o})`, 'stroke-width': i%3===0 ? 1.4 : 1}, svg);
+      }
+    },
+    // Dotted ball flight from a tee to a flag, kept inside the bottom padding
+    tracer(svg, d, w, hh, k, pb){
+      const x0 = +d.x0*w, x1 = +d.x1*w, y0 = hh - pb*.22, y1 = hh - pb*.28, peak = pb*.7;
+      el('path', {d:`M${x0} ${y0} Q${(x0*.4 + x1*.6).toFixed(1)} ${(y0 - peak*2).toFixed(1)} ${x1} ${y1}`, fill:'none', stroke:'rgba(255,255,255,.13)', 'stroke-width':2, 'stroke-dasharray':'0.5 10', 'stroke-linecap':'round'}, svg);
+      el('path', {d:`M${x1} ${y1} q${18*k} ${-12*k} ${34*k} 0 q${8*k} ${-5*k} ${16*k} 0`, fill:'none', stroke:'rgba(255,255,255,.1)', 'stroke-width':1.5, 'stroke-dasharray':'0.5 7', 'stroke-linecap':'round'}, svg);
+      el('path', {d:`M${x0-7*k} ${y0+5*k}h${14*k}M${x0} ${y0+5*k}v${-3*k}`, stroke:'rgba(255,255,255,.18)', 'stroke-width':1.5, 'stroke-linecap':'round'}, svg);
+      el('circle', {cx:x0, cy:y0-2*k, r:3.2*k, fill:'rgba(255,255,255,.2)'}, svg);
+      const fx = x1 + 70*k, fy = y1 + 4*k;
+      el('ellipse', {cx:fx, cy:fy, rx:9*k, ry:2.6*k, fill:'none', stroke:'rgba(255,255,255,.14)', 'stroke-width':1.2}, svg);
+      el('path', {d:`M${fx} ${fy}V${fy-46*k}`, stroke:'rgba(255,255,255,.16)', 'stroke-width':1.5, 'stroke-linecap':'round'}, svg);
+      el('path', {d:`M${fx} ${fy-46*k}l${18*k} ${6*k}l${-18*k} ${6*k}z`, fill:'rgba(248,0,0,.32)'}, svg);
+    },
+    // Alternating mowing stripes in a corner of the fairway
+    mow(svg, d, w, hh){
+      const band = +d.band, g = el('g', {transform:`rotate(-32 ${+d.cx*w} ${+d.cy*hh})`}, svg), span = Math.hypot(w, hh);
+      for (let x = -span; x < span*2; x += band*2) el('rect', {x:+d.cx*w + x - span, y:+d.cy*hh - span, width:band, height:span*2, fill:'rgba(255,255,255,.022)'}, g);
+      fadeMask(svg, (+d.cx*100).toFixed(0), (+d.cy*100).toFixed(0), (+d.fade*100).toFixed(0));
+    },
+    // A breaking putt rolling into the cup
+    cup(svg, d, w, hh, k, pb){
+      const cx = +d.cx*w, cy = hh - pb*.45;
+      el('path', {d:`M${w+10} ${cy - 50*k} C${cx + 150*k} ${cy - 60*k} ${cx + 70*k} ${cy + 22*k} ${cx + 16*k} ${cy}`, fill:'none', stroke:'rgba(255,255,255,.14)', 'stroke-width':2, 'stroke-dasharray':'0.5 9', 'stroke-linecap':'round'}, svg);
+      el('ellipse', {cx, cy, rx:22*k, ry:7*k, fill:'rgba(255,255,255,.03)', stroke:'rgba(255,255,255,.16)', 'stroke-width':1.4}, svg);
+      el('circle', {cx:cx + 30*k, cy:cy - 3*k, r:4*k, fill:'rgba(255,255,255,.22)'}, svg);
+    },
+    // A lit match lying in the corner, the Bern Your Brand spark
+    match(svg, d, w, hh, k, pb){
+      const hx = +d.cx*w, hy = hh - pb*.5, a = 24*Math.PI/180, len = 150*k;
+      const ux = Math.cos(a), uy = Math.sin(a), nx = -uy*3.5*k, ny = ux*3.5*k, tx = hx - ux*len, ty = hy + uy*len;
+      el('path', {d:`M${hx+nx} ${hy+ny}L${tx+nx} ${ty+ny}L${tx-nx} ${ty-ny}L${hx-nx} ${hy-ny}`, fill:'none', stroke:'rgba(255,255,255,.14)', 'stroke-width':1.2, 'stroke-linejoin':'round'}, svg);
+      el('ellipse', {cx:hx, cy:hy, rx:8.5*k, ry:6*k, fill:'rgba(248,0,0,.4)', transform:`rotate(-24 ${hx} ${hy})`}, svg);
+      el('path', {d:flamePath(hx + 1*k, hy + 2*k, 10*k, 48*k, .12), fill:'none', stroke:'rgba(248,0,0,.42)', 'stroke-width':1.4}, svg);
+      el('path', {d:flamePath(hx + 1*k, hy, 4.5*k, 24*k, .1), fill:'rgba(248,0,0,.2)'}, svg);
+      el('path', {d:`M${hx + 14*k} ${hy - 64*k}c${-12*k} ${-12*k} ${10*k} ${-22*k} ${-2*k} ${-36*k}s${10*k} ${-22*k} ${-2*k} ${-34*k}`, fill:'none', stroke:'rgba(255,255,255,.1)', 'stroke-width':1.4, 'stroke-dasharray':'0.5 7', 'stroke-linecap':'round'}, svg);
+    },
+    // A burst of ignition rays
+    spark(svg, d, w, hh, k){
+      const cx = +d.cx*w, cy = +d.cy*hh, R = +d.r*k, r = rng(+d.seed);
+      for (let i=0;i<16;i++){
+        const a = i/16*Math.PI*2 + (r()-.5)*.25, r0 = R*(.22 + r()*.12), r1 = R*(.55 + r()*.45);
+        el('path', {d:`M${(cx + Math.cos(a)*r0).toFixed(1)} ${(cy + Math.sin(a)*r0).toFixed(1)}L${(cx + Math.cos(a)*r1).toFixed(1)} ${(cy + Math.sin(a)*r1).toFixed(1)}`, stroke:`rgba(${d.stroke},${d.o})`, 'stroke-width': i%2 ? 1.2 : 2, 'stroke-linecap':'round', 'stroke-dasharray': i%3===0 ? '2 6' : 'none'}, svg);
+      }
+    },
+    // Embers drifting up from the bottom edge
+    embers(svg, d, w, hh, k){
+      const r = rng(+d.seed), x0 = +d.x0*w, x1 = +d.x1*w;
+      for (let i=0;i<+d.n;i++){
+        const c = el('circle', {class:'ember', cx:(x0 + r()*(x1-x0)).toFixed(1), cy:(hh - r()*hh*.12).toFixed(1), r:(.8 + r()*1.8).toFixed(2), fill:`rgb(${d.fill})`}, svg);
+        const dur = 7 + r()*7;
+        c.style.cssText = `--d:${dur.toFixed(1)}s;--dl:${(-r()*dur).toFixed(1)}s;--o:${(+d.o*(.5 + r()*.5)).toFixed(2)};--h:${(hh*+d.rise*(.6 + r()*.4)).toFixed(0)}px;--dx:${((r()-.5)*80).toFixed(0)}px`;
+      }
+    },
+    // A dimpled golf ball peeking in from the corner
+    dimples(svg, d, w, hh, k){
+      const R = +d.r*k, cx = w + R*.32, cy = hh + R*.32, id = 'dball' + texes.indexOf(svg);
+      el('circle', {r:R, cx, cy}, el('clipPath', {id}, el('defs', {}, svg)));
+      const g = el('g', {'clip-path':`url(#${id})`}, svg), s = 21*k;
+      for (let row=0, y=cy-R; y<cy+R; row++, y+=s*.866)
+        for (let x = cx - R + (row%2)*s/2; x < cx + R; x += s){
+          const f = 1 - Math.hypot(x-cx, y-cy)/R;      // dimples shrink toward the ball's edge
+          if (f > .04) el('circle', {cx:x.toFixed(1), cy:y.toFixed(1), r:(6.4*k*Math.sqrt(f)).toFixed(2), fill:'none', stroke:'rgba(255,255,255,.07)', 'stroke-width':1}, g);
+        }
+      el('circle', {r:R, cx, cy, fill:'none', stroke:'rgba(255,255,255,.1)', 'stroke-width':1.4}, svg);
     }
+  };
+  function drawTex(svg){
+    const sec = svg.parentElement, w = sec.clientWidth, hh = sec.clientHeight;
+    svg.setAttribute('viewBox', `0 0 ${w} ${hh}`);
+    svg.innerHTML = '';
+    kinds[svg.dataset.kind](svg, svg.dataset, w, hh, w < 720 ? .7 : 1, parseFloat(getComputedStyle(sec).paddingBottom) || 96);
   }
   const drawAllTex = () => texes.forEach(drawTex);
   drawAllTex();
   let tt; window.addEventListener('resize', () => { clearTimeout(tt); tt = setTimeout(drawAllTex, 150); });
+  // Only animate embers while their section is on screen
+  if ('IntersectionObserver' in window){
+    const io = new IntersectionObserver(es => es.forEach(e => e.target.classList.toggle('on', e.isIntersecting)));
+    texes.filter(t => t.dataset.kind === 'embers').forEach(t => io.observe(t));
+  }
 
   /* Hero: logo builds itself (hole, pin, then the ball traces the B) */
   const full = document.getElementById('markFull');

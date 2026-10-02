@@ -95,6 +95,7 @@ a{color:inherit}
 /* ---------- Sections ---------- */
 section{position:relative}
 .tex{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.tex.flip{transform:rotate(180deg)}
 .sec{overflow:hidden}
 .sec > .wrap{position:relative;z-index:1}
 .sec{padding:clamp(80px,12vw,150px) 0}
@@ -161,6 +162,8 @@ section{position:relative}
 .caddie-sec{padding-bottom:clamp(48px,6vw,80px)}
 .card{background:var(--chalk);color:#111;border-radius:6px;padding:clamp(32px,6vw,72px);position:relative;overflow:hidden}
 .card::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;border:2px dashed rgba(248,0,0,.35)}
+.card-rings{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.card > .sec-head,.card > .rules{position:relative}
 .card .sec-head h2{color:#000}
 .card .sec-head p{color:#555}
 .rules{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,52px) clamp(28px,5vw,72px);margin:0;padding:0;list-style:none}
@@ -286,7 +289,7 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
 
   <!-- STATEMENT -->
   <section class="sec statement" aria-labelledby="stmt">
-    <svg class="tex" aria-hidden="true" data-kind="contour" data-cx="1.02" data-cy="1.05" data-rings="13" data-step="46" data-stroke="rgba(255,255,255,.055)" data-seed="3" data-fade="0.62"></svg>
+    <svg class="tex" aria-hidden="true" data-kind="stripes"></svg>
     <div class="wrap">
       <p class="context">In a rapidly evolving golf landscape, igniting growth requires far more than standard marketing tactics.</p>
       <h2 class="big" id="stmt">We Provide the Strategic Architecture &amp; Revenue-Focused Execution <span>Necessary to Scale Ambitious Golf Brands.</span></h2>
@@ -295,8 +298,8 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
 
   <!-- BAG -->
   <section class="sec bag" id="bag" aria-labelledby="bag-h">
-    <svg class="tex" aria-hidden="true" data-kind="ring" data-cx="0.93" data-cy="0.04" data-r="230" data-stroke="rgba(248,0,0,.32)" data-dash="3 11" data-fade="1"></svg>
-    <svg class="tex" aria-hidden="true" data-kind="ring" data-cx="0.93" data-cy="0.04" data-r="150" data-stroke="rgba(255,255,255,.07)" data-dash="2 9" data-fade="1"></svg>
+    <svg class="tex" aria-hidden="true" data-kind="flight"></svg>
+    <svg class="tex flip" aria-hidden="true" data-kind="flight"></svg>
     <div class="wrap">
       <div class="sec-head">
         <h2 id="bag-h">What's in Our Bag.</h2>
@@ -357,7 +360,8 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
 
   <!-- VERTICALS -->
   <section class="sec verticals" id="where" aria-labelledby="where-h">
-    <svg class="tex" aria-hidden="true" data-kind="contour" data-cx="1.0" data-cy="-0.05" data-rings="13" data-step="44" data-stroke="rgba(255,255,255,.055)" data-seed="7" data-fade="0.6"></svg>
+    <svg class="tex" aria-hidden="true" data-kind="dimples"></svg>
+    <svg class="tex flip" aria-hidden="true" data-kind="dimples"></svg>
     <div class="wrap">
       <div class="sec-head">
         <h2 id="where-h">Where We Tee It Up.</h2>
@@ -434,7 +438,8 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
 
   <!-- CADDIE -->
   <section class="sec caddie-sec" aria-label="Putt With Confidence">
-    <svg class="tex" aria-hidden="true" data-kind="contour" data-cx="-0.04" data-cy="1.08" data-rings="12" data-step="42" data-stroke="rgba(255,255,255,.055)" data-seed="11" data-fade="0.55"></svg>
+    <svg class="tex" aria-hidden="true" data-kind="grain"></svg>
+    <svg class="tex flip" aria-hidden="true" data-kind="grain"></svg>
     <div class="wrap">
       <div class="caddie">
         <div>
@@ -457,9 +462,17 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
 
   <!-- VALUES -->
   <section class="sec values" id="values" aria-labelledby="values-h">
-    <svg class="tex" aria-hidden="true" data-kind="ring" data-cx="0.03" data-cy="0.98" data-r="120" data-stroke="rgba(255,255,255,.08)" data-dash="2 9" data-fade="1"></svg>
+    <svg class="tex" aria-hidden="true" data-kind="grid"></svg>
+    <svg class="tex flip" aria-hidden="true" data-kind="grid"></svg>
     <div class="wrap">
       <div class="card">
+        <svg class="card-rings" aria-hidden="true" fill="none" stroke-width="2" stroke-linecap="round">
+          <circle cx="100%" cy="0" r="62" transform="translate(-50 50)" stroke="rgba(248,0,0,.28)" stroke-dasharray="1 8"/>
+          <circle cx="0" cy="100%" r="150" transform="translate(30 30)" stroke="rgba(0,0,0,.11)" stroke-dasharray="3 10"/>
+          <circle cx="0" cy="100%" r="96" transform="translate(30 30)" stroke="rgba(248,0,0,.22)" stroke-dasharray="1 7"/>
+          <circle cx="0" cy="44%" r="54" transform="translate(-22 0)" stroke="rgba(0,0,0,.1)" stroke-dasharray="2 7"/>
+          <circle cx="100%" cy="100%" r="30" transform="translate(-44 -40)" stroke="rgba(248,0,0,.3)" stroke-dasharray="2 6"/>
+        </svg>
         <div class="sec-head">
           <h2 id="values-h">Starter's Guidelines.</h2>
           <p>Our Handbook of Brand Values for Every Round.</p>
@@ -492,7 +505,8 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
 
   <!-- IMPACT -->
   <section class="sec impact" id="impact" aria-labelledby="impact-h">
-    <svg class="tex" aria-hidden="true" data-kind="contour" data-cx="1.06" data-cy="1.3" data-rings="12" data-step="48" data-stroke="rgba(0,0,0,.13)" data-seed="5" data-fade="0.6"></svg>
+    <svg class="tex" aria-hidden="true" data-kind="rake"></svg>
+    <svg class="tex flip" aria-hidden="true" data-kind="rake"></svg>
     <div class="wrap">
       <div>
         <p class="label">Driving Impact</p>
@@ -504,8 +518,7 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
 
   <!-- CONTACT -->
   <section class="sec contact" id="contact" aria-labelledby="contact-h">
-    <svg class="tex" aria-hidden="true" data-kind="contour" data-cx="-0.08" data-cy="1.3" data-rings="13" data-step="44" data-stroke="rgba(255,255,255,.055)" data-seed="9" data-fade="0.5"></svg>
-    <svg class="tex" aria-hidden="true" data-kind="ring" data-cx="0.97" data-cy="0.08" data-r="140" data-stroke="rgba(248,0,0,.28)" data-dash="3 11" data-fade="1"></svg>
+    <svg class="tex" aria-hidden="true" data-kind="divots"></svg>
     <div class="wrap">
       <div>
         <img class="side-icon" src="icon.webp" alt="" width="120" height="128">
@@ -633,33 +646,91 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
   let gt; drawGreen();
   window.addEventListener('resize', () => { clearTimeout(gt); gt = setTimeout(drawGreen, 150); });
 
-  /* Section textures: faint green contours and dotted putt rings */
+  /* Section textures: a different faint course detail for each section */
   const texes = [...document.querySelectorAll('svg.tex')];
-  function drawTex(svg){
-    const sec = svg.parentElement, w = sec.clientWidth, hh = sec.clientHeight, d = svg.dataset;
-    svg.setAttribute('viewBox', `0 0 ${w} ${hh}`);
-    svg.innerHTML = '';
-    const cx = +d.cx*w, cy = +d.cy*hh;
-    if (d.kind === 'ring'){
-      el('circle', {cx, cy, r:d.r, fill:'none', stroke:d.stroke, 'stroke-width':2, 'stroke-dasharray':d.dash, 'stroke-linecap':'round'}, svg);
-    } else {
-      const seed = +d.seed, step = +d.step;
-      for (let i=1;i<=+d.rings;i++){
-        const r = i*step;
-        let p = '';
-        for (let a=0;a<=360;a+=5){
-          const t = a*Math.PI/180;
-          const wob = 1 + 0.12*Math.sin(2*t + i*0.3 + seed) + 0.06*Math.sin(3*t - i*0.2 + seed*2) + 0.03*Math.sin(5*t + i + seed);
-          p += (a===0?'M':'L') + (cx + Math.cos(t)*r*1.6*wob).toFixed(1) + ' ' + (cy + Math.sin(t)*r*wob).toFixed(1);
-        }
-        el('path', {d:p+'Z', fill:'none', stroke:d.stroke, 'stroke-width': i%4===0 ? 1.4 : 1}, svg);
+  const W = 'rgba(255,255,255,', R = 'rgba(248,0,0,';
+  function fade(svg, m){ svg.style.webkitMaskImage = m; svg.style.maskImage = m; }
+  function rel(sec, sel){
+    const a = sec.querySelector(sel).getBoundingClientRect(), b = sec.getBoundingClientRect();
+    return {l:a.left-b.left, t:a.top-b.top, r:a.right-b.left, b:a.bottom-b.top};
+  }
+  const kinds = {
+    /* Statement: soft mowing stripes, fading in from the right */
+    stripes(svg, w, h){
+      const g = el('g', {transform:`rotate(-24 ${w} ${h/2})`}, svg), D = Math.hypot(w,h), band = 84;
+      for (let x = w - D; x < w + D; x += band*2) el('rect', {x, y:h/2 - D, width:band, height:D*2, fill:W+'.026)'}, g);
+      fade(svg, 'linear-gradient(90deg, transparent 22%, rgba(0,0,0,.6) 55%, #000 100%)');
+    },
+    /* Services: loose, nested ball-flight arcs drifting off the top-right */
+    flight(svg, w, h){
+      const x0 = w*0.42, y0 = Math.min(h*0.5, 520);
+      for (let i = 0; i < 10; i++){
+        const L = w*0.7 + i*w*0.055, H = 200 + i*30;
+        el('path', {d:`M${x0 - i*16} ${y0}C${x0 + L*.38} ${y0 - H*1.33} ${x0 + L*.86} ${y0 - H*1.33} ${x0 + L} ${y0}`, fill:'none', stroke:W+'.06)', 'stroke-width':1}, svg);
       }
-      const m = `radial-gradient(circle at ${(+d.cx*100).toFixed(0)}% ${(+d.cy*100).toFixed(0)}%, #000 0, #000 25%, transparent ${(+d.fade*100).toFixed(0)}%)`;
-      svg.style.webkitMaskImage = m; svg.style.maskImage = m;
+      fade(svg, 'radial-gradient(ellipse 55% 60% at 100% 0%, #000 0, transparent 100%)');
+    },
+    /* Verticals: an open field of dimples, no ball edge */
+    dimples(svg, w, h){
+      const a = 17, r = 5.2, g = el('g', {fill:'none', stroke:W+'.06)', 'stroke-width':1}, svg);
+      for (let j = 0, y = 0; y < h*0.9; j++, y = j*a*.866)
+        for (let x = (j & 1) ? a/2 : 0; x < w + a; x += a)
+          if (x > w*0.25) el('circle', {cx:x.toFixed(1), cy:y.toFixed(1), r}, g);
+      fade(svg, 'radial-gradient(ellipse 60% 78% at 100% 0%, #000 0, rgba(0,0,0,.5) 42%, transparent 100%)');
+    },
+    /* Caddie: the grain of the green, short strokes leaning with a slow drift */
+    grain(svg, w, h){
+      const sp = 30, g = el('g', {stroke:W+'.07)', 'stroke-width':1.3, 'stroke-linecap':'round'}, svg);
+      let d = '';
+      for (let y = sp/2; y < h; y += sp) for (let x = sp/2; x < w; x += sp){
+        const t = -1.1 + 0.5*Math.sin(x/240) + 0.35*Math.cos(y/160 + x/400), dx = Math.cos(t)*7.5, dy = Math.sin(t)*7.5;
+        d += `M${(x-dx).toFixed(1)} ${(y-dy).toFixed(1)}L${(x+dx).toFixed(1)} ${(y+dy).toFixed(1)}`;
+      }
+      el('path', {d}, g);
+      fade(svg, 'radial-gradient(ellipse 46% 66% at 100% 100%, #000 0, transparent 100%)');
+    },
+    /* Values: a faint scorecard grid fading out from under the card */
+    grid(svg, w, h){
+      const cw = 46, ch = 34, g = el('g', {transform:`rotate(-4 ${w} ${h})`, fill:'none', stroke:W+'.06)', 'stroke-width':1}, svg);
+      let d = '';
+      for (let y = h - ch*9; y <= h + ch*2; y += ch) d += `M${w*0.3} ${y}H${w + 80}`;
+      for (let x = w + 80; x >= w*0.3; x -= cw) d += `M${x} ${h - ch*9}V${h + ch*2}`;
+      el('path', {d}, g);
+      fade(svg, 'radial-gradient(ellipse 45% 70% at 100% 100%, #000 0, transparent 100%)');
+    },
+    /* Purpose: raked-sand lines, gently rippled */
+    rake(svg, w, h){
+      let d = '';
+      const x0 = Math.round(w*0.3);
+      for (let o = -h; o < h*1.2; o += 18)
+        for (let x = x0; x <= w + 12; x += 12){
+          const y = o + (x - x0)*0.22 + Math.sin(x/64 + o/80)*3.6;
+          d += (x === x0 ? 'M' : 'L') + x.toFixed(1) + ' ' + y.toFixed(1);
+        }
+      el('path', {d, fill:'none', stroke:'rgba(0,0,0,.12)', 'stroke-width':1.3}, svg);
+      fade(svg, 'radial-gradient(ellipse 48% 85% at 100% 0%, #000 0, transparent 100%)');
+    },
+    /* Contact: rows of practice-range divots */
+    divots(svg, w, h){
+      let d = '', row = 0;
+      for (let y = 20; y < h + 30; y += 40, row++)
+        for (let x = (row % 2) * 35; x < w + 40; x += 70){
+          const jx = Math.sin(x*12.9898 + y*78.233)*8, cx = x + jx, cy = y + Math.cos(x*4.1 + y)*4;
+          d += `M${(cx-10).toFixed(1)} ${cy.toFixed(1)}Q${cx.toFixed(1)} ${(cy+7).toFixed(1)} ${(cx+10).toFixed(1)} ${cy.toFixed(1)}`;
+        }
+      el('path', {d, fill:'none', stroke:W+'.075)', 'stroke-width':1.3, 'stroke-linecap':'round'}, svg);
+      fade(svg, 'radial-gradient(ellipse 46% 85% at 100% 100%, #000 0, transparent 100%)');
     }
+  };
+  function drawTex(svg){
+    const sec = svg.parentElement, w = sec.clientWidth, h = sec.clientHeight;
+    svg.setAttribute('viewBox', `0 0 ${w} ${h}`);
+    svg.innerHTML = '';
+    if (kinds[svg.dataset.kind]) kinds[svg.dataset.kind](svg, w, h, sec);
   }
   const drawAllTex = () => texes.forEach(drawTex);
   drawAllTex();
+  if (document.fonts) document.fonts.ready.then(drawAllTex);
   let tt; window.addEventListener('resize', () => { clearTimeout(tt); tt = setTimeout(drawAllTex, 150); });
 
   /* Hero: logo builds itself (hole, pin, then the ball traces the B) */

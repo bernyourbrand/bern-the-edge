@@ -777,22 +777,33 @@ footer a{color:var(--chalk);text-decoration-color:var(--red);text-underline-offs
     lockup.style.transform = `translateY(${(10*(1-l)).toFixed(2)}px)`;
   }
 
-  function play(){
+  const PLAYS = 3;        // times it plays when the page loads
+  const REPLAY_PLAYS = 1; // times it plays when "Roll It Again" is clicked
+  const HOLD = 2000;      // milliseconds the finished logo stays up between plays
+  let holdTimer;
+
+  function play(times){
     cancelAnimationFrame(raf);
+    clearTimeout(holdTimer);
     replay.classList.remove('show');
     svg.style.visibility = 'visible';
     if (reduce){ render(3600); replay.classList.add('show'); return; }
-    const t0 = performance.now() + 250;
-    (function tick(now){
-      const ms = now - t0;
-      render(Math.max(0, ms));
-      if (ms < 3600) raf = requestAnimationFrame(tick);
-      else replay.classList.add('show');
-    })(performance.now());
+    let left = times;
+    (function run(){
+      left--;
+      const t0 = performance.now() + 250;
+      (function tick(now){
+        const ms = now - t0;
+        render(Math.max(0, ms));
+        if (ms < 3600) raf = requestAnimationFrame(tick);
+        else if (left > 0) holdTimer = setTimeout(run, HOLD);
+        else replay.classList.add('show');
+      })(performance.now());
+    })();
   }
-  replay.addEventListener('click', play);
+  replay.addEventListener('click', () => play(REPLAY_PLAYS));
   render(0);
-  if (document.readyState === 'complete') play(); else window.addEventListener('load', play);
+  if (document.readyState === 'complete') play(PLAYS); else window.addEventListener('load', () => play(PLAYS));
 
   /* Contact form */
   const form = document.getElementById('contactForm');
